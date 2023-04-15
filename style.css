@@ -17,6 +17,10 @@
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
+	background-color: #000000;
+opacity: 1;
+background-image: radial-gradient(#0000a8 0.8px, #000000 0.8px);
+background-size: 16px 16px;
 }
 
 main{
@@ -97,7 +101,7 @@ a.nav-link{
 	justify-content: space-evenly;
 }
 
-#home .filter{
+/* #home .filter{
 	background-color: #000000;
 opacity: 0.9;
 background-image: radial-gradient(#0000a8 0.25px, #000000 0.25px);
@@ -110,7 +114,7 @@ background-size: 5px 5px; ;
     left: 0;
     right: 0;
 	opacity:.20;
-}  
+}   */
 
 .intro {
 	text-align:center;
