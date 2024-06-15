@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'DynaPuff'; /* Nombre de la fuente */
+  src: url('DynaPuff/static/DynaPuff_Condensed-Regular.ttf') format('truetype'); /* Ruta y formato de la fuente */
+  font-weight: light; /* Peso de la fuente (normal, negrita, etc.) */
+  font-style: light; /* Estilo de la fuente (normal, cursiva) */
+}
+@font-face {
+  font-family: 'IndieFlower'; /* Nombre de la fuente */
+  src: url('Indie_Flower/IndieFlower-Regular.ttf') format('truetype'); /* Ruta y formato de la fuente */
+  font-weight: bold; /* Peso de la fuente (normal, negrita, etc.) */
+  font-style: bold; /* Estilo de la fuente (normal, cursiva) */
+}
+
+body{
+     margin:10px;
+     font-family: 'DynaPuff';
+     font-weight: 100;
+     
+}
+
