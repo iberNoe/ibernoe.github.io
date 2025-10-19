@@ -149,20 +149,146 @@
   </div>
 
   <!-- Galería (Ejemplo simple) -->
-  <section id="galeria" class="container">
-    <h2>Galería</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <img src="https://via.placeholder.com/300x200?text=Proyecto+1" alt="Proyecto 1" class="img-fluid rounded shadow">
+  <!-- =======================
+     SECCIÓN GALERÍA
+======================= -->
+<section id="galeria" class="bg-[#0d1b2a] py-12">
+  <h2 class="text-center text-3xl font-bold text-white mb-8">
+    📸 Mi galería de Instagram
+  </h2>
+
+  <!-- Carrusel principal -->
+  <div class="swiper mySwiper w-11/12 max-w-5xl mx-auto">
+    <div class="swiper-wrapper">
+
+      <!-- Cada publicación -->
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CR5D8v5pAZU/" target="_blank">
+          <img src="https://www.instagram.com/p/CR5D8v5pAZU/media/?size=l" alt="Licencia de Software" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
       </div>
-      <div class="col-md-4 mb-4">
-        <img src="https://via.placeholder.com/300x200?text=Proyecto+2" alt="Proyecto 2" class="img-fluid rounded shadow">
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ1/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ1/media/?size=l" alt="Open Source" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
       </div>
-      <div class="col-md-4 mb-4">
-        <img src="https://via.placeholder.com/300x200?text=Proyecto+3" alt="Proyecto 3" class="img-fluid rounded shadow">
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ2/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ2/media/?size=l" alt="System on a Chip" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
       </div>
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ3/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ3/media/?size=l" alt="Periféricos" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ4/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ4/media/?size=l" alt="Un Bit" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ5/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ5/media/?size=l" alt="Software de una computadora" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ6/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ6/media/?size=l" alt="Componentes de una computadora" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ7/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ7/media/?size=l" alt="Arquitectura de software" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="https://www.instagram.com/p/CRXYZ8/" target="_blank">
+          <img src="https://www.instagram.com/p/CRXYZ8/media/?size=l" alt="Software vs Hardware" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+        </a>
+      </div>
+
     </div>
-  </section>
+
+    <!-- Controles -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- =======================
+     ESTILOS Y LIBRERÍAS
+======================= -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<style>
+  /* Fondo oscuro con efecto suave */
+  #galeria {
+    background: linear-gradient(160deg, #0d1b2a, #1b263b);
+  }
+
+  /* Ajustes del carrusel */
+  .swiper {
+    border-radius: 1rem;
+  }
+
+  .swiper-slide img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .swiper-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Flechas de navegación */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fca311;
+  }
+
+  /* Paginación */
+  .swiper-pagination-bullet {
+    background: #fca311;
+  }
+</style>
+
+<!-- =======================
+     SCRIPT DE INICIALIZACIÓN
+======================= -->
+<script>
+  new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
 
   <!-- Redes Sociales -->
   <section id="redes" class="container">
