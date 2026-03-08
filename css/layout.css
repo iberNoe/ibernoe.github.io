@@ -227,12 +227,13 @@
     }
 
     .nav-links {
-        position: fixed;
+        position: absolute;
         top: var(--nav-height);
         left: 0;
         width: 100%;
-        height: calc(100vh - var(--nav-height));
-        background: var(--bg-overlay);
+        height: 100vh;
+        background: var(--bg-primary);
+        /* Use solid color so you can't see the page scrolling behind it on mobile */
         backdrop-filter: blur(10px);
         flex-direction: column;
         justify-content: center;
