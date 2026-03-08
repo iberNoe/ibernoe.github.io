@@ -27,7 +27,6 @@
     z-index: 9998;
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), inset 0 0 10px rgba(255, 0, 255, 0.3);
     transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
-    /* Adding a slight delay to the outline for a trailing effect */
     transition-property: transform, width, height, border-color;
     transition-duration: 0.15s, 0.2s, 0.2s, 0.2s;
     transition-timing-function: ease-out;

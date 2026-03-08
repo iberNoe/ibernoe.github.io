@@ -101,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const now = performance.now();
 
-        if (now - lastSpawn > 10) {
-            for (let i = 0; i < 4; i++) {
+        if (now - lastSpawn > 15) {
+            for (let i = 0; i < 2; i++) {
                 spawnSpark(mouse.x, mouse.y);
             }
             lastSpawn = now;
@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const now = performance.now();
 
-            // Mobile optimized spawn rate
-            if (now - lastSpawn > 15) {
-                for (let i = 0; i < 3; i++) {
+            // Never spawn particles while actively touching/scrolling to prevent scroll lock
+            if (now - lastSpawn > 50) {
+                for (let i = 0; i < 1; i++) {
                     spawnSpark(mouse.x, mouse.y);
                 }
                 lastSpawn = now;
@@ -154,7 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
+    let isTouchDevice = false;
+    window.addEventListener("touchstart", () => { isTouchDevice = true; }, { once: true });
+
     function drawCursor() {
+        if (isTouchDevice) return; // Don't draw the persistent white cursor on touch screens
 
         ctx.beginPath();
         ctx.fillStyle = "#ffffff";
@@ -164,6 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.arc(mouse.x, mouse.y, 4, 0, Math.PI * 2);
         ctx.fill();
 
+        // Reset shadowBlur so it doesn't affect particles
+        ctx.shadowBlur = 0;
     }
 
     function update() {
@@ -188,8 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ctx.beginPath();
             ctx.fillStyle = p.color;
-            ctx.shadowColor = p.color;
-            ctx.shadowBlur = 15;
+            // Removed shadowBlur for particles to fix mobile performance/stuttering
+            ctx.shadowBlur = 0;
 
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
             ctx.fill();

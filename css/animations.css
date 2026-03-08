@@ -1,0 +1,213 @@
+/* Animated Background glow effects */
+.bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--accent-glow);
+    filter: blur(120px);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: floatGlow 15s infinite alternate ease-in-out;
+    mix-blend-mode: screen;
+}
+
+.bg-glow-1 {
+    top: -200px;
+    left: -200px;
+    background: rgba(157, 78, 221, 0.5);
+    /* Purple */
+}
+
+.bg-glow-2 {
+    bottom: -100px;
+    right: -200px;
+    background: rgba(0, 240, 255, 0.4);
+    /* Cyan */
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+.bg-glow-3 {
+    top: 30%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 85, 0.4);
+    /* Neon pink */
+    animation-delay: -2s;
+    animation-duration: 12s;
+}
+
+.bg-glow-4 {
+    bottom: 20%;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 255, 102, 0.3);
+    /* Neon green */
+    animation-delay: -8s;
+    animation-duration: 18s;
+}
+
+@keyframes floatGlow {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(150px, -100px) scale(1.2);
+    }
+
+    66% {
+        transform: translate(-100px, 150px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(100px, 50px) scale(1.3);
+    }
+}
+
+/* Lasers Tomorrowland Style */
+.laser {
+    position: absolute;
+    height: 2px;
+    width: 150%;
+    left: -25%;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    animation: laserScan linear infinite;
+}
+
+.laser-1 {
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    transform: rotate(15deg);
+}
+
+.laser-2 {
+    background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+    box-shadow: 0 0 10px var(--accent-purple), 0 0 20px var(--accent-purple), 0 0 40px var(--accent-purple);
+    animation-duration: 6s;
+    animation-delay: 1.5s;
+    transform: rotate(-10deg);
+}
+
+.laser-3 {
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    box-shadow: 0 0 10px var(--accent-green), 0 0 20px var(--accent-green), 0 0 40px var(--accent-green);
+    animation-duration: 5s;
+    animation-delay: 3s;
+    transform: rotate(5deg);
+}
+
+@keyframes laserScan {
+    0% {
+        top: -20%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 120%;
+        opacity: 0;
+    }
+}
+
+/* Flash effect on scroll (Hip-hop strobe) */
+.bg-glow.flash {
+    opacity: 0.9 !important;
+    filter: blur(60px) brightness(1.8) !important;
+    transform: scale(1.15) !important;
+    transition: all 0.05s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.laser.flash {
+    opacity: 1 !important;
+    height: 5px !important;
+    background: #fff !important;
+    box-shadow: 0 0 30px #fff, 0 0 80px #fff, 0 0 150px var(--accent-blue) !important;
+    transition: all 0.03s ease-out !important;
+}
+
+/* Pulsing text glow */
+.hero-title .gradient-text {
+    animation: pulseTextGlow 3s infinite alternate;
+}
+
+@keyframes pulseTextGlow {}
+
+/* Responsive Animations */
+@media (max-width: 768px) {
+    .bg-glow {
+        width: 300px !important;
+        height: 300px !important;
+        /* Disable heavy GPU operations for mobile */
+        mix-blend-mode: normal;
+        filter: blur(40px);
+        animation: floatGlowMobile 15s infinite alternate ease-in-out;
+    }
+
+    .bg-glow-1 {
+        top: -100px;
+        left: -100px;
+    }
+
+    .bg-glow-2 {
+        bottom: -50px;
+        right: -100px;
+    }
+
+    .bg-glow-3 {
+        width: 250px !important;
+        height: 250px !important;
+        top: 20%;
+    }
+
+    .bg-glow-4 {
+        width: 250px !important;
+        height: 250px !important;
+        left: -50px;
+    }
+
+    /* Shorter travel distance for glowing orbs on mobile */
+    @keyframes floatGlowMobile {
+        0% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        33% {
+            transform: translate(50px, -30px) scale(1.1);
+        }
+
+        66% {
+            transform: translate(-30px, 50px) scale(0.9);
+        }
+
+        100% {
+            transform: translate(30px, 20px) scale(1.2);
+        }
+    }
+
+    /* Tone down the strobe flash effect on mobile to prevent extreme flashing and lag */
+    .bg-glow.flash {
+        opacity: 0.7 !important;
+        filter: blur(40px) brightness(1.5) !important;
+        transform: scale(1.05) !important;
+    }
+}
