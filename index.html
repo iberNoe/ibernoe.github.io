@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio y Blog</title>
+    <meta name="description" content="Portafolio personal y blog de proyectos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+    <!-- Barra de progreso Scroll (Neón) -->
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Fondo Animado -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+    <div class="bg-glow bg-glow-4"></div>
+    <div class="laser laser-1"></div>
+    <div class="laser laser-2"></div>
+    <div class="laser laser-3"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Iber Noe<span>.</span></a>
+            <div class="nav-links">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contacto" class="nav-link btn-primary">redes Sociales</a>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Sección Hero -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <span class="badge">Bienvenido a mi espacio</span>
+                    <h1 class="hero-title">Construyendo ideas en <span class="gradient-text">experiencias
+                            digitales</span></h1>
+                    <p class="hero-subtitle">Desarrollador enfocado en crear soluciones estéticas, funcionales y de alto
+                        rendimiento. Explora mis últimos proyectos y artículos.</p>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#blog" class="btn btn-secondary">Leer el Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Mis Proyectos</h2>
+                    <p class="section-description">Una selección de mi trabajo reciente y proyectos personales.</p>
+                </div>
+
+                <div class="grid projects-grid">
+                    <!-- Tarjeta Proyecto 1 -->
+                    <article class="card project-card reveal-on-scroll">
+                        <div class="card-image-wrapper">
+                            <div class="card-image bg-gradient-1"></div>
+                            <div class="overlay">
+                                <a href="#" class="btn-icon">Ver Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                            <h3 class="card-title">Plataforma E-commerce</h3>
+                            <p class="card-excerpt">Desarrollo completo de una tienda online con panel de administración
+                                y pasarela de pagos integrada.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Proyecto 2 -->
+                    <article class="card project-card reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="card-image-wrapper">
+                            <div class="card-image bg-gradient-2"></div>
+                            <div class="overlay">
+                                <a href="#" class="btn-icon">Ver Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                            <h3 class="card-title">App de Gestión de Tareas</h3>
+                            <p class="card-excerpt">Aplicación en tiempo real para la gestión y colaboración de equipos
+                                remotos con tablero Kanban.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Proyecto 3 -->
+                    <article class="card project-card reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="card-image-wrapper">
+                            <div class="card-image bg-gradient-3"></div>
+                            <div class="overlay">
+                                <a href="#" class="btn-icon">Ver Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JS Vanilla</span>
+                            </div>
+                            <h3 class="card-title">Landing Page Premium</h3>
+                            <p class="card-excerpt">Diseño de una landing page optimizada para conversión con
+                                animaciones fluidas y diseño responsivo.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Blog -->
+        <section id="blog" class="section section-darker">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Blog & Artículos</h2>
+                    <p class="section-description">Compartiendo conocimientos, tutoriales y reflexiones sobre desarrollo
+                        de software y diseño.</p>
+                </div>
+
+                <div class="grid blog-grid">
+                    <!-- Tarjeta Blog 1 -->
+                    <article class="card blog-card reveal-on-scroll">
+                        <div class="card-content">
+                            <div class="meta-info">
+                                <span class="date">Octubre 15, 2023</span>
+                                <span class="category">Desarrollo Web</span>
+                            </div>
+                            <h3 class="card-title"><a href="#" class="hover-underline">Por qué el Diseño de Interfaces
+                                    Importa Más que Nunca</a></h3>
+                            <p class="card-excerpt">Explorando cómo una estética premium puede aumentar la retención de
+                                usuarios y la confianza en tu marca.</p>
+                            <a href="#" class="read-more">Leer artículo →</a>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Blog 2 -->
+                    <article class="card blog-card reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="card-content">
+                            <div class="meta-info">
+                                <span class="date">Septiembre 28, 2023</span>
+                                <span class="category">Tutorial</span>
+                            </div>
+                            <h3 class="card-title"><a href="#" class="hover-underline">Dominando CSS Grid para Layouts
+                                    Complejos</a></h3>
+                            <p class="card-excerpt">Una guía paso a paso para construir estructuras complejas sin
+                                depender de frameworks externos.</p>
+                            <a href="#" class="read-more">Leer artículo →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-large reveal-on-scroll">
+                    <a href="#" class="btn btn-outline">Ver todos los artículos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="contact-card reveal-on-scroll">
+                    <div class="contact-content">
+                        <h2 class="section-title">¿Listo para empezar un proyecto?</h2>
+                        <p class="section-description">Estoy disponible para trabajos freelance y nuevas oportunidades.
+                        </p>
+                    </div>
+                    <div class="contact-action">
+                        <a href="mailto:hola@ejemplo.com" class="btn btn-primary btn-large">Hablemos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Portafolio<span>.</span></a>
+                    <p class="footer-text">Diseñado y construido con precisión.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/ibernoe" target="_blank" class="social-icon"><img
+                            src="iconos/github.png" alt="GitHub" class="icon"></a>
+                    <a href="https://linkedin.com/in/ibernoe" target="_blank" class="social-icon"><img
+                            src="iconos/linkedin.png" alt="LinkedIn" class="icon"></a>
+                    <a href="https://medium.com/@ibernoe" target="_blank" class="social-icon"><img
+                            src="iconos/medium.png" alt="Medium" class="icon"></a>
+                    <a href="https://facebook.com/ibernoe" target="_blank" class="social-icon"><img
+                            src="iconos/facebook.png" alt="Facebook" class="icon"></a>
+                    <a href="https://x.com/ibernoe" target="_blank" class="social-icon"><img src="iconos/x.png" alt="X"
+                            class="icon"></a>
+                    <a href="https://www.instagram.com/iber_noe/" target="_blank" class="social-icon"><img
+                            src="iconos/instagram.png" alt="Instagram" class="icon"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mi Portafolio. Todos los derechos reservado.
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cursor.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

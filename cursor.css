@@ -1,0 +1,75 @@
+/* Custom Dazzling Cursor */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--accent-blue);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--accent-purple);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9998;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), inset 0 0 10px rgba(255, 0, 255, 0.3);
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+    /* Adding a slight delay to the outline for a trailing effect */
+    transition-property: transform, width, height, border-color;
+    transition-duration: 0.15s, 0.2s, 0.2s, 0.2s;
+    transition-timing-function: ease-out;
+}
+
+/* Hover effects for the cursor */
+.cursor-hover .cursor-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-pink);
+    box-shadow: 0 0 15px var(--accent-pink), 0 0 30px var(--accent-pink);
+}
+
+.cursor-hover .cursor-outline {
+    width: 60px;
+    height: 60px;
+    border-color: var(--accent-blue);
+    background-color: rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.6), inset 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* Electric Sparks */
+.spark {
+    position: fixed;
+    width: 2px;
+    height: 12px;
+    background-color: var(--accent-blue);
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 9997;
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accent-blue), 0 0 15px #fff;
+    animation: spark-shoot 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes spark-shoot {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0) rotate(var(--rot));
+        opacity: 0;
+    }
+}
