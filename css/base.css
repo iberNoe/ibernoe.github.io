@@ -9,11 +9,11 @@
     --text-secondary: #a0a0b0;
     --text-muted: #6e6e80;
 
-    --accent-glow: rgba(138, 43, 226, 0.5);
-    --accent-blue: #00f0ff;
-    --accent-purple: #ff00ff;
-    --accent-pink: #ff0055;
-    --accent-green: #00ff66;
+    --accent-glow: rgba(0, 115, 255, 0.5);
+    --accent-blue: #00d2ff;
+    --accent-purple: #1e70bf;
+    --accent-pink: #0f6b7c;
+    --accent-green: #3ab5a4;
 
     --border-color: rgba(255, 255, 255, 0.08);
     --border-hover: rgba(255, 255, 255, 0.2);
