@@ -128,6 +128,18 @@
     background: linear-gradient(to right, #252536, #30304a);
 }
 
+.bg-chess {
+    background-image: url('../img/chess.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-neojs {
+    background-image: url('../img/neojs.png');
+    background-size: cover;
+    background-position: center;
+}
+
 .card:hover .card-image {
     transform: scale(1.05);
 }
